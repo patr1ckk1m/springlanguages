@@ -23,12 +23,13 @@
 		    <td><c:out value="${language.version}"/></td>
 		    <td>
 		    	<a href="/languages/delete/${loop.index}">Delete</a>
-		    	<a href="/languages/edit/${id}">Edit</a>
+		    	<a href="/languages/edit/${loop.index}">Edit</a>
 		    </td>
         </tr>
     </c:forEach>
     </table>
     
+    <p>${errors}</p>
     <form:form method="POST" action="/languages/new" modelAttribute="language">
 	    <form:label path="name">Name
 	    <form:errors path="name"/>

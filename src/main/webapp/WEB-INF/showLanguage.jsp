@@ -8,8 +8,13 @@
 <title>${language.name }</title>
 </head>
 <body>
-	<p><c:out value="${language.name}"/></p>
-	<p><c:out value="${language.creator}"/></p>
-	<p><c:out value="${language.version}"/></p>
+<a href = "/languages">Dashboard</a>
+	<p>Name: <c:out value="${language.name}"/></p>
+	<p>Creator: <c:out value="${language.creator}"/></p>
+	<p>Version: <c:out value="${language.version}"/></p>
+	
+   	<a href="/languages/delete/${index}">Delete</a>
+  	<a href="/languages/edit/${index}">Edit</a>
+
 </body>
 </html>
